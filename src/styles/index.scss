@@ -1,0 +1,59 @@
+@import './global';
+
+.container-home-hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("/media/hero.svg");
+    background-size: cover;
+    background-position: center 30%;
+
+    h1 {
+        position: absolute;
+        bottom: .5rem;
+        width: 100%;
+        text-align: center;
+        color: $white;
+        font-family: $bangers;
+        font-size: 64px;
+        -webkit-text-stroke: 3px $black;
+    }
+
+    .shew-logo {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        width: 80px;
+    }
+}
+
+.section-blog {
+    margin-bottom: 3rem;
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    .post {
+        margin-bottom: 1rem;
+        padding: 0 15%;
+
+        .post-title a {
+            color: $blue;
+            font-family: $bangers;
+            font-size: 32px;
+        }
+
+        .post-date {
+            display: inline-block;
+            padding-bottom: .2rem;
+            color: $gray;
+            font-family: $acme;
+            font-weight: 900;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .container-home-hero {
+        background-position: center 100%;
+    }
+}
