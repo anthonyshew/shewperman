@@ -1,0 +1,77 @@
+@import 'global.scss';
+
+.project-card {
+    width: 90%;
+    max-width: 800px;
+    margin: .5rem;
+    padding: 1rem;
+    border: 8px solid $black;
+    background-image: url("/media/dot-mask.png");
+
+    h3 {
+        font-family: $acme;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .image-container {
+            width: 25%;
+            text-align: center;
+        }
+
+
+        .other-container {
+            width: 75%;
+
+            p {
+                font-family: $mclaren;
+            }
+
+            .linkbuttons-container {
+                text-align: right;
+
+                a {
+                    display: inline-block;
+                    margin: 1rem .5rem;
+                    padding: .5rem 1rem;
+                    border-radius: 1rem;
+                    font-family: $acme;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .project-card {
+        .flex-container {
+            flex-direction: column;
+
+            .image-container {
+                width: 100%;
+                margin: 1rem 0;
+            }
+
+            .other-container {
+                .linkbuttons-container {
+                    text-align: center;
+
+                    a {
+                        margin: .5rem;
+                    }
+
+                    a:first-of-type {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

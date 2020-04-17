@@ -1,0 +1,14 @@
+@import 'global.scss';
+
+.tech-card {
+    display: inline-block;
+    width: 25%;
+    margin-bottom: 2rem;
+    color: $white;
+    font-family: $acme;
+    text-align: center;
+
+    p {
+        font-size: 24px;
+    }
+}

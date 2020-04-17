@@ -1,0 +1,11 @@
+<svg className="dogear" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27 27.5L46 33V97H37.5L27 27.5Z" fill="black" fill-opacity="0.17"/>
+<path d="M27 27.5L46 33V97H37.5L27 27.5Z" fill="black" fill-opacity="0.17"/>
+<path d="M45.4141 96.8461L27.1065 27.1065L96.8461 45.4141L45.4141 96.8461Z" fill="url(#paint0_radial)" stroke="black"/>
+<defs>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(27.5 28) rotate(43.8767) scale(54.1041 54.7406)">
+<stop stop-color="#B3B3B3"/>
+<stop offset="1" stop-color="white"/>
+</radialGradient>
+</defs>
+</svg>

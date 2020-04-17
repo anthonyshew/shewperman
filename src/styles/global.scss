@@ -90,11 +90,11 @@ sans-serif;
 $black: #000000;
 $white: #ffffff;
 $gray: #AEAEAE;
-$red: #CC0001;
+$red: #A90000;
 $dark-red: #800000;
-$blue: #00235B;
+$blue: #070058;
 $light-blue: #88ABE2;
-$yellow: #F39116;
+$aqua: #009393;
 
 body {
     width: 100%;
@@ -105,24 +105,13 @@ html {
     scroll-behavior: smooth;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h4,
-h5,
-h6,
-label {
-    color: $blue;
-    font-family: $acme;
-}
-
 h2 {
-    color: $blue;
+    color: $black;
+    font-family: $mouse;
+    text-transform: uppercase;
     font-size: 48px;
     font-weight: 900;
-    text-align: center;
+    text-align: right;
 }
 
 .bold {
@@ -140,7 +129,7 @@ h2 {
     padding: 1rem 2rem;
     border: none;
     border-radius: 1rem;
-    background-color: $yellow;
+    background-color: $aqua;
     font-family: $bangers;
     font-size: 24px;
     text-align: center;
@@ -148,6 +137,6 @@ h2 {
     &:visited,
     &:hover,
     &:link {
-        color: $blue;
+        color: $white;
     }
 }

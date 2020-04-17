@@ -7,7 +7,7 @@
     background-size: cover;
     background-position: center 30%;
 
-    h1 {
+    h2 {
         position: absolute;
         bottom: .5rem;
         width: 100%;
@@ -25,11 +25,123 @@
     }
 }
 
+.section-mystery {
+    position: relative;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $black;
+
+    .question-mark {
+        color: $black;
+        font-size: 300px;
+        cursor: default;
+    }
+
+    p {
+        color: $black;
+        text-align: center;
+        font-family: $bangers;
+        font-size: 72px;
+    }
+
+    .dogear {
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        width: 10%;
+        cursor: pointer;
+    }
+
+    .border-mask {
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        width: 5.4%;
+        height: 1px;
+        background-color: $white;
+    }
+}
+
+.section-interjections {
+    position: relative;
+    padding: 5%;
+    padding-bottom: 0;
+    border: 12px solid $black;
+    background-image: url('/media/dot-mask.png');
+    background-color: #6186E4;
+
+    .websites {
+        position: absolute;
+        top: 2%;
+        left: 0;
+        width: 60%;
+    }
+
+    .apps {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        width: 40%;
+    }
+
+    .ecommerce {
+        margin-top: 30%;
+    }
+}
+
+.section-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 1rem;
+    }
+}
+
+.section-tech {
+    background-image: url("/media/skyline.svg");
+    background-size: cover;
+    background-position: center bottom;
+
+    h2 {
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 1rem;
+        color: $white;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .more {
+        padding: 0 3rem 35%;
+        color: $white;
+        font-family: $acme;
+        font-size: 36px;
+        text-align: center;
+    }
+}
+
 .section-blog {
     margin-bottom: 3rem;
 
     h2 {
-        margin-bottom: 1rem;
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 1rem;
     }
 
     .post {
@@ -49,11 +161,55 @@
             font-family: $acme;
             font-weight: 900;
         }
+
+        .post-excerpt {
+            font-family: $mclaren;
+        }
+    }
+}
+
+@media (max-width: 755px) {
+    .section-tech {
+        .more {
+            padding-bottom: 45%;
+        }
     }
 }
 
 @media (max-width: 650px) {
     .container-home-hero {
         background-position: center 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section-tech {
+        .more {
+            padding: 0 1rem 55%;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .section-mystery {
+        p {
+            font-size: 48px;
+        }
+    }
+}
+
+@media (max-width: 535px) {
+    .section-tech {
+        .more {
+            padding-bottom: 65%;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .section-tech {
+        .more {
+            padding-bottom: 85%;
+        }
     }
 }
