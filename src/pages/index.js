@@ -189,7 +189,7 @@ const Index = ({ location }) => {
             <h1>Anthony Shew</h1>
             <h2>Full Stack Javascript Developer</h2>
             {useMediaQuery("(max-width: 750px)") ? <p>You may know me for my baseball career. But I'm also passionate about creating software that adds value to businesses.</p> : <>
-              <p>My name is Anthony and I try to learn everything I can. You may know me as Anthony, the baseball player, or you may have come here looking for Anthony, the developer. Either way, I'm happy you've come here to find out about my superpowers. Hate to let you down but I don't have any - but I do like to learn about nearly anything. From learning about my body as an athlete to finding out what Javascript is truly capable of, learning sometimes feels like a superpower in it's own way.</p>
+              <p>My name is Anthony and I try to learn everything I can. You may know me as Anthony, the baseball player, or you may have come here looking for Anthony, the developer. Either way, I'm happy you're here to find out about my superpowers. Hate to let you down but I don't have any - but I do like to learn about nearly anything. From learning about my body as an athlete to finding out what Javascript is truly capable of, learning sometimes feels like a superpower in it's own way.</p>
             </>}
           </div>
         </div>
