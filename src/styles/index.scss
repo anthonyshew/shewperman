@@ -152,8 +152,8 @@
         top: 0;
         bottom: 0;
         left: 0;
-        right: -75px;
-        background-image: linear-gradient(to right, #333 75%, #ffffff 100%);
+        right: -200px;
+        background-image: linear-gradient(to right, #ffffff 75%, #333333 100%);
         transition: all 1s ease;
 
         &.out {
@@ -188,6 +188,11 @@
             text-align: left;
             font-size: 18px;
             font-family: $acme;
+        }
+
+        .my-headshot {
+            background-image: url("/media/dot-mask.png");
+            background-color: $royal-blue;
         }
 
         .bio {
@@ -291,7 +296,7 @@
         padding: 0 15%;
 
         .post-title a {
-            color: $purple;
+            color: $royal-blue;
             font-family: $bangers;
             font-size: 32px;
         }

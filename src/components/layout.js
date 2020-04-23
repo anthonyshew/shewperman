@@ -23,16 +23,23 @@ const Layout = ({ location, children }) => {
     )
   } else if (location.pathname === contactPath) {
     header = (<nav className="contact-navbar">
-      <Link to="/"><Arrow style={{ transform: "rotate(180deg)" }} />  Fly Home</Link>
+      <Link to="/"><Arrow style={{ transform: "rotate(180deg)" }} /> Fly Home</Link>
       <Link to="/blog">Fly To Blog <Arrow /> </Link>
     </nav>)
+  } else {
+    header = (<nav className="blog-navbar">
+      <Link to="/"><Arrow style={{ transform: "rotate(180deg)" }} /> Fly Home</Link>
+      <Link to="/contact">Contact <Arrow /> </Link>
+    </nav>
+
+    )
   }
 
   let footer = (
     <>
       <Link to="/" activeClassName="active">Home</Link>
       <Link to="/blog" activeClassName="active">Blog</Link>
-      {location.pathname !== contactPath ? <button className="footer-contact-button">Contact Me!</button> : null}
+      {location.pathname !== contactPath ? <Link to="/contact" className="footer-contact-button">Contact Me!</Link> : null}
     </>
   )
 

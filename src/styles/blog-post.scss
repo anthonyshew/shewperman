@@ -2,10 +2,14 @@
 
 .blog-post {
     h1 {
-        padding: 0 .5rem;
-        font-size: 48px;
+        margin-top: 2rem;
+        padding: 0 1rem;
+        color: $blue;
+        font-size: 36px;
+        font-family: $mclaren;
+        text-transform: uppercase;
         font-weight: 900;
-        text-align: center;
+        text-align: left;
     }
 
     .post-date {
@@ -13,7 +17,7 @@
         padding-top: .5rem;
         padding-bottom: .2rem;
         color: $gray;
-        font-family: "Raleway", sans-serif;
+        font-family: $mclaren;
         font-weight: 900;
         text-align: center;
     }
@@ -31,7 +35,7 @@
         h6 {
             width: 100%;
             padding: 0;
-            color: $blue;
+            color: $royal-blue;
             font-family: $bangers;
             text-align: left;
         }
@@ -63,8 +67,9 @@
         p {
             padding: 1rem;
             width: 100%;
-            color: $black;
-            font-size: 18px;
+            color: $blue;
+            font-size: 20px;
+            font-family: $acme;
         }
 
         a,

@@ -10,9 +10,6 @@ import useMediaQuery from "../hooks/useMediaQuery"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Dogear from "../svg/dogear.svg"
-// import Websites from "../svg/websites.svg"
-// import Apps from "../svg/apps.svg"
-// import Ecommerce from "../svg/ecommerce.svg"
 
 const Index = ({ location }) => {
   const data = useStaticQuery(graphql`
@@ -198,12 +195,6 @@ const Index = ({ location }) => {
         </div>
         <div className="border-mask" ref={borderMask}></div>
       </section>
-
-      {/* <section className="section-interjections">
-        <Websites />
-        <Apps />
-        <Ecommerce />
-      </section> */}
 
       <section className="section-projects">
         <h2>My Favorite Missions So&nbsp;Far</h2>

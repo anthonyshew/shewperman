@@ -39,7 +39,7 @@ export default ({ location }) => {
       </SEO>
 
       <div className="blog-index">
-        <h1>Blog</h1>
+        <h1>My Blog</h1>
         <div className="posts">
           {data.allMarkdownRemark.edges.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
@@ -51,7 +51,7 @@ export default ({ location }) => {
                   </Link>
                 </h2>
                 <small className="post-date">{node.frontmatter.date}</small>
-                <p
+                <p className="excerpt"
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
