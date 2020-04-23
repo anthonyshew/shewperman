@@ -1,16 +1,51 @@
 @import 'global.scss';
 
-.page-contact {
+.contact-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: $dark-red;
+
+    a {
+        color: $white;
+        font-size: 24px;
+        font-family: $acme;
+        text-transform: uppercase;
+
+        .arrow {
+            position: relative;
+            top: 1px;
+            display: inline-block;
+            width: 20px;
+        }
+    }
+}
+
+.contact-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 0 1rem;
+    padding-top: 1rem;
+    background-image: url("/media/spotlight.svg"), url("/media/dot-mask.png");
+    background-color: $blue;
+    background-size: 95% 95%, cover;
+    background-repeat: no-repeat;
+    background-position: center -100%, center center;
+    color: $white;
+    font-family: $acme;
+    font-size: 24px;
 
     h1 {
         font-size: 48px;
         font-family: $bangers;
-        text-align: center;
+        text-align: left;
     }
 
     p {
-        margin: 0 1rem;
-        text-align: center;
+        max-width: 320px;
+        text-align: left;
     }
 
     .contact-form {
@@ -18,7 +53,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 1rem;
+        margin-top: 5rem;
 
         .error {
             margin-top: .5rem;
@@ -44,7 +79,7 @@
             max-width: 560px;
             margin: .4rem auto 1rem;
             padding: .4rem .6rem;
-            border: 2px solid $blue;
+            border: 5px solid $black;
             border-radius: 1rem;
             color: $blue;
             font-weight: 900;
@@ -60,11 +95,11 @@
             margin-top: 1rem;
             margin-bottom: 3rem;
             padding: .5rem;
-            border: 2px solid $blue;
+            border: 5px solid $white;
             border-radius: 1rem;
-            font-size: 24px;
+            font-size: 36px;
             font-family: $bangers;
-            color: $blue;
+            color: $white;
             background-color: $aqua;
             cursor: pointer;
             appearance: none;
@@ -76,10 +111,12 @@
     }
 }
 
-@media (max-width: 650px) {
-    .page-contact {
-        p {
-            text-align: left;
+@media (max-width: 600px) {
+    .contact-page {
+        .success-message {
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     }
 }

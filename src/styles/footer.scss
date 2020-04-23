@@ -6,45 +6,29 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background-color: $red;
-}
+    background-color: $dark-gray;
 
-@media (max-width: 850px) {
-    .footer {
-        flex-direction: column;
+    a {
+        margin: .8rem;
+        padding: .2rem;
+        color: $white;
+        font-family: $mclaren;
+        text-transform: uppercase;
+        font-size: 20px;
 
-        .pages,
-        .socials,
-        .logo-container {
-            width: 100%;
+        &.active {
+            color: $mint;
         }
+    }
 
-        .socials,
-        .logo-container {
-            margin-top: 2rem;
-        }
-
-        .pages {
-            .footer-link-list {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-
-        .socials {
-            p {
-                font-size: 36px;
-            }
-
-            .icons {
-                margin-top: 1rem;
-            }
-        }
-
-        .logo-container {
-            text-align: center;
-        }
+    .footer-contact-button {
+        appearance: none;
+        padding: .5rem 1rem;
+        border: 5px solid $white;
+        border-radius: 1rem;
+        background-color: $aqua;
+        color: $white;
+        font-family: $bangers;
+        font-size: 24px;
     }
 }

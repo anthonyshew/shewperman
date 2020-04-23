@@ -3,12 +3,15 @@ import '../styles/reset.scss'
 import '../styles/global.scss'
 import '../styles/navbar.scss'
 import '../styles/footer.scss'
+import { Link } from "gatsby"
 
 import Logo from "../svg/logo.svg"
+import Arrow from "../svg/arrow-right.svg"
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  let header, footer
+  const contactPath = `${__PATH_PREFIX__}/contact`
+  let header
 
   if (location.pathname === rootPath) {
     header = (
@@ -18,11 +21,20 @@ const Layout = ({ location, children }) => {
         <ContactButton />
       </section>
     )
-    footer = (<p>I am the index footer.</p>)
-  } else {
-    header = (<ContactButton />)
-    footer = (<p>I am the page footer.</p>)
+  } else if (location.pathname === contactPath) {
+    header = (<nav className="contact-navbar">
+      <Link to="/"><Arrow style={{ transform: "rotate(180deg)" }} />  Fly Home</Link>
+      <Link to="/blog">Fly To Blog <Arrow /> </Link>
+    </nav>)
   }
+
+  let footer = (
+    <>
+      <Link to="/" activeClassName="active">Home</Link>
+      <Link to="/blog" activeClassName="active">Blog</Link>
+      {location.pathname !== contactPath ? <button className="footer-contact-button">Contact Me!</button> : null}
+    </>
+  )
 
   return (
     <>
@@ -36,5 +48,5 @@ const Layout = ({ location, children }) => {
 export default Layout
 
 const ContactButton = ({ props }) => (
-  <button className="contact-button" onClick={() => console.log('pop modal out')}>Contact Me!</button>
+  <Link to="/contact" className="contact-button">Contact Me!</Link>
 )
