@@ -45,6 +45,13 @@ const Index = ({ location }) => {
         }
       }
     }
+    me: file(absolutePath: { regex: "/me.png/" }) {
+      childImageSharp {
+        fixed(width: 394, height: 525) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     javascript: file(absolutePath: { regex: "/javascript.png/" }) {
       childImageSharp {
         fixed(width: 80, height: 80) {
@@ -138,19 +145,19 @@ const Index = ({ location }) => {
   useAnimateOnVisible({ element: playerCard })
   useAnimateOnVisible({ element: sponsorCard })
 
+  const sectionMystery = useRef(null)
   const topMask = useRef(null)
   const borderMask = useRef(null)
   const shadowMask = useRef(null)
   const paragraphs = useRef(null)
-  const dogear = useRef(null)
 
   const animatePageTurn = () => {
+    sectionMystery.current.classList.add("out")
     topMask.current.classList.add("out")
     borderMask.current.classList.add("out")
     shadowMask.current.classList.add("out")
     paragraphs.current.classList.add("out")
     document.getElementsByClassName("dogear")[0].classList.add("out")
-    console.log(dogear.current)
   }
 
   return (
@@ -163,7 +170,7 @@ const Index = ({ location }) => {
         <meta name="twitter:image:alt" content="Adopt a Minor Leaguer Home Page" />
       </SEO>
 
-      <section className="section-mystery">
+      <section className="section-mystery" ref={sectionMystery}>
         <div className="top-mask" ref={topMask}>
           <div className="p-container" ref={paragraphs}>
             <p className="question-mark">?</p>
@@ -176,10 +183,22 @@ const Index = ({ location }) => {
 
         <div className="shadow-container" ref={shadowMask}></div>
         <div className="content-underneath">
-          This is the content underneath.
+          <Image
+            className="my-headshot"
+            fixed={data.me.childImageSharp.fixed}
+            alt="Me!"
+          />
+          <div className="bio">
+            <h1>Anthony Shew</h1>
+            <h2>Full Stack Javascript Developer</h2>
+            {useMediaQuery("(max-width: 750px)") ? <p>You may know me for my baseball career. But I'm also passionate about creating software that adds value to businesses.</p> : <>
+              <p>My name is Anthony and I try to learn everything I can. You may know me as Anthony, the baseball player, or you may have come here looking for Anthony, the developer. Either way, I'm happy you've come here to find out about my superpowers. Hate to let you down but I don't have any - but I do like to learn about nearly anything. From learning about my body as an athlete to finding out what Javascript is truly capable of, learning sometimes feels like a superpower in it's own way.</p>
+            </>}
+          </div>
         </div>
         <div className="border-mask" ref={borderMask}></div>
       </section>
+
       {/* <section className="section-interjections">
         <Websites />
         <Apps />
@@ -230,7 +249,7 @@ const Index = ({ location }) => {
         <h2>Tools in My Belt</h2>
         <div className="flex-container">
           <TechCard
-            title="Javascript"
+            title={useMediaQuery("(max-width: 350px)") ? "JS" : "Javascript"}
             imgSrc={data.javascript.childImageSharp.fixed}
           />
           <TechCard
