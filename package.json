@@ -2,7 +2,7 @@
   "name": "shewperman",
   "private": true,
   "description": "Shewperman Web & Software Development",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Anthony Shew",
   "scripts": {
     "ngrok": "cd .. && ngrok http 3000",
