@@ -10,9 +10,9 @@ import useMediaQuery from "../hooks/useMediaQuery"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Dogear from "../svg/dogear.svg"
-import Websites from "../svg/websites.svg"
-import Apps from "../svg/apps.svg"
-import Ecommerce from "../svg/ecommerce.svg"
+// import Websites from "../svg/websites.svg"
+// import Apps from "../svg/apps.svg"
+// import Ecommerce from "../svg/ecommerce.svg"
 
 const Index = ({ location }) => {
   const data = useStaticQuery(graphql`
@@ -138,6 +138,21 @@ const Index = ({ location }) => {
   useAnimateOnVisible({ element: playerCard })
   useAnimateOnVisible({ element: sponsorCard })
 
+  const topMask = useRef(null)
+  const borderMask = useRef(null)
+  const shadowMask = useRef(null)
+  const paragraphs = useRef(null)
+  const dogear = useRef(null)
+
+  const animatePageTurn = () => {
+    topMask.current.classList.add("out")
+    borderMask.current.classList.add("out")
+    shadowMask.current.classList.add("out")
+    paragraphs.current.classList.add("out")
+    document.getElementsByClassName("dogear")[0].classList.add("out")
+    console.log(dogear.current)
+  }
+
   return (
     <Layout location={location}>
       <SEO
@@ -149,13 +164,22 @@ const Index = ({ location }) => {
       </SEO>
 
       <section className="section-mystery">
-        <p className="question-mark">?</p>
-        <p className="first-line">My True Identity?</p>
-        <p className="second-line">That's a Secret...</p>
-        <Dogear onClick={() => console.log('page turn')} />
-        <div className="border-mask"></div>
-      </section>
+        <div className="top-mask" ref={topMask}>
+          <div className="p-container" ref={paragraphs}>
+            <p className="question-mark">?</p>
+            <p className="first-line">My True Identity?</p>
+            <p className="second-line">That's a Secret...</p>
+            <p className="third-line">(Unless you turn the page...)</p>
+          </div>
+          <Dogear onClick={() => animatePageTurn()} />
+        </div>
 
+        <div className="shadow-container" ref={shadowMask}></div>
+        <div className="content-underneath">
+          This is the content underneath.
+        </div>
+        <div className="border-mask" ref={borderMask}></div>
+      </section>
       {/* <section className="section-interjections">
         <Websites />
         <Apps />

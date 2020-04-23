@@ -27,8 +27,11 @@
 
 .section-mystery {
     position: relative;
-    padding-bottom: 1rem;
+    display: inline-block;
+    width: 100%;
+    min-height: 525px;
     border-bottom: 1px solid $black;
+    // overflow: hidden;
 
     .question-mark {
         color: $black;
@@ -43,22 +46,124 @@
         font-size: 72px;
     }
 
+    .third-line {
+        color: #808080;
+        font-family: $acme;
+        font-size: 18px;
+    }
+
     .dogear {
         position: absolute;
         bottom: -1px;
         right: 0;
         width: 10%;
+        min-width: 80px;
+        max-width: 100px;
         cursor: pointer;
+        opacity: 1;
+        transition: opacity .1s linear;
+        transform-origin: 100% 100%;
+        animation: tug 1s linear infinite;
+
+        @keyframes tug {
+            50% {
+                transform: scale(1.08)
+            }
+
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        &.out {
+            opacity: 0;
+        }
+    }
+
+    .p-container {
+        opacity: 1;
+        transition: all 1s ease;
+
+        p {
+            height: 100%;
+        }
+
+        &.out {
+            opacity: 0;
+
+            p {
+                transition: all .2s ease;
+                opacity: 0;
+                height: 0;
+            }
+        }
     }
 
     .border-mask {
         position: absolute;
         bottom: -1px;
         right: 0;
-        width: 5.4%;
-        height: 1px;
+        width: 5.3%;
+        min-width: 44px;
+        max-width: 53px;
+        height: 2px;
         background-color: $white;
+        transition: all 2s ease;
+        transform-origin: 100% 100%;
+        animation: expand 1s linear infinite;
+
+        @keyframes expand {
+            50% {
+                transform: scaleX(1.08)
+            }
+
+            100% {
+                transform: scaleX(1)
+            }
+        }
+
+        &.out {
+            opacity: 0;
+        }
     }
+
+    .top-mask {
+        z-index: 2;
+        width: 100%;
+        min-height: 525px;
+        background-color: $white;
+        transition: all 1s ease;
+
+
+        &.out {
+            width: 0;
+        }
+    }
+
+    .shadow-container {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: -75px;
+        background-image: linear-gradient(to right, #333 75%, #ffffff 100%);
+        transition: all 1s ease;
+
+        &.out {
+            right: 100%;
+        }
+    }
+
+    .content-underneath {
+        z-index: -2;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
 }
 
 .section-interjections {
@@ -149,7 +254,7 @@
         padding: 0 15%;
 
         .post-title a {
-            color: $blue;
+            color: $purple;
             font-family: $bangers;
             font-size: 32px;
         }
