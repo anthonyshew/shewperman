@@ -211,18 +211,6 @@ const Index = ({ location }) => {
           githubLink="https://github.com/anthonyshew/adoptaplayer"
         />
         <ProjectCard
-          bgColor="#3D5C5C"
-          textColor="#FFFFFF"
-          buttonColor="#FFFFFF"
-          title="MMSI"
-          imgSrc={data.mmsiLogo.childImageSharp.fixed}
-          imgAlt="Mission Mechanical Services Inc. Logo"
-          description="MISSION MECHANICAL SERVICES INC. IS ONE OF THE MOST REPUTABLE HVAC COMPANIES IN SOUTHERN CALIFORNIA."
-          type="Site"
-          projectLink="https://missionmechanicalservices.com"
-          githubLink="https://github.com/anthonyshew/mmsi"
-        />
-        <ProjectCard
           bgColor="#6EC202"
           textColor="#000000"
           buttonColor="#000000"
@@ -234,6 +222,19 @@ const Index = ({ location }) => {
           projectLink="https://customizer.flatbillbaseball.com"
           githubLink="https://github.com/anthonyshew/flatbill-customizer"
         />
+        <ProjectCard
+          bgColor="#3D5C5C"
+          textColor="#FFFFFF"
+          buttonColor="#FFFFFF"
+          title="MMSI"
+          imgSrc={data.mmsiLogo.childImageSharp.fixed}
+          imgAlt="Mission Mechanical Services Inc. Logo"
+          description="MISSION MECHANICAL SERVICES INC. IS ONE OF THE MOST REPUTABLE HVAC COMPANIES IN SOUTHERN CALIFORNIA."
+          type="Site"
+          projectLink="https://missionmechanicalservices.com"
+          githubLink="https://github.com/anthonyshew/mmsi"
+        />
+
       </section>
 
       <section className="section-tech">
