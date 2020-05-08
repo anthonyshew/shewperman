@@ -28,6 +28,13 @@ const Index = ({ location }) => {
         }
       }
     }
+    comeroLogo: file(absolutePath: { regex: "/comero.png/" }) {
+      childImageSharp {
+        fixed(width: 150, height: 150) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     mmsiLogo: file(absolutePath: { regex: "/mmsi-logo.png/" }) {
       childImageSharp {
         fixed(width: 150, height: 150) {
@@ -209,6 +216,18 @@ const Index = ({ location }) => {
           type="Site"
           projectLink="https://adoptaminorleaguer.com"
           githubLink="https://github.com/anthonyshew/adoptaplayer"
+        />
+        <ProjectCard
+          bgColor="#e50101"
+          textColor="#ffffff"
+          buttonColor="#ffffff"
+          title="Comero"
+          imgSrc={data.comeroLogo.childImageSharp.fixed}
+          imgAlt="Comero Logo"
+          description="COMERO IS A TEMPLATE BUILDER FOR LOCAL RESTAURANTS THAT WANT A CLEAN, MODERN WEBSITE WITHOUT THE HASSLE. JUST BECAUSE YOU OWN A RESTAURANT DOESN'T MEAN YOU WANT TO BE A PART-TIME WEB DEV."
+          type="Site"
+          projectLink="https://customizer.flatbillbaseball.com"
+          githubLink="https://github.com/anthonyshew/flatbill-customizer"
         />
         <ProjectCard
           bgColor="#6EC202"
