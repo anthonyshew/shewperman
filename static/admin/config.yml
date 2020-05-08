@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+local_backend: true
+
 media_folder: static/img
 public_folder: /img
 
@@ -18,11 +20,3 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "siteInfo"
-    label: "Site Info"
-    files:
-      - label: "Sponsorships Created"
-        name: "siteInfo"
-        file: "content/siteInfo/siteInfo.json"
-        fields:
-        - {label: "Sponsorships Created", name: totalSponsorships, widget: "number"}
