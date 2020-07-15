@@ -16,7 +16,7 @@ const Layout = ({ location, children }) => {
   if (location.pathname === rootPath) {
     header = (
       <section className="container-home-hero">
-        <h2>YOUR SITE NEEDS A TEST</h2>
+        <h2>YOUR SITE NEEDS ANOTHER TEST</h2>
         <Logo />
         <ContactButton />
       </section>
